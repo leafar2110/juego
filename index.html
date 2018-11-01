@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<title>Slot Machine </title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+	<script  src="js/jquery.min.js"></script>
+	<script  src="js/index.js"></script>
+
+	<div id="stage" class="perspective-off content-b">
+		<div id="rotate">
+			<div id="ring1" class="ring"></div>
+			<div id="ring2" class="ring"></div>
+			<div id="ring3" class="ring"></div>
+			<div id="ring4" class="ring"></div>
+			
+		</div>
+		<div>
+			<button id="btn" class="go">Lanzar Caracoles</button>
+		</div>
+		<div class="text">
+			<div class="area profesional"> <strong>Vida profesional<br><br></strong>
+				<script>
+					var colours = ["Es hora de planear los proyectos del futuro sin perder nada. Invierte y ganarás con lo que tienes delante, deja para otro momento sueños e inspiraciones, este no es el momento de despistarte. Es momento de hacer y trabajar, tendrás tu recompensa en otro momento.", "Problemas financieros que deben ser resueltos ahora que la situación se está normalizando. Es momento de reorganizar las situaciones laborales de forma rápida. Pide ayuda a personas con influencia, haz cosas diferentes. No inicies nuevos proyectos, no tema y sigue adelante con las metas que tienes marcadas", "No te excedas en lo que caiga en tus manos, sigue siempre tus ideales. Cuidado con negocios que parecen buenos, ya que no todo lo que parece es real, analiza con cuidado y evita riesgos innecesarios.", " Es preciso analizar detenidamente las situaciones antes de actuar. Puede haber pérdidas de tipo financiero y malos negocios. Una ambición descontrolada puede llevarte a la ruina. Mantén tus proyectos en secreto."];
+					
+					$('.go').on('click',function(){
+						setTimeout(function(){
+							document.write(colours[Math.floor(Math.random() * colours.length)]);
+						},4100);
+					})
+				</script>
+			</div>
+			<div class="area amor"> <strong>Vida amorosa<br><br></strong>
+				<script>
+					var amor = ["Es preciso controlar las emociones. Cuidado con las relaciones problemáticas, deja de ser cabezota. Para y escucha lo que siente tu corazón, en vez de seguir fantaseando. Investiga a fondo tus sentimientos de forma que todo quede claro y de esa manera consigas el camino correcto a la felicidad en pareja.", "No entres en disputas, ya que las posibilidades de victoria son pequeñas. Es mejor abrirse a un nuevo amor. Controla tu ira y deja pasar el tiempo, la distancia y el sufrimiento pasan. No elijas de forma rápida, ya que no saldrá bien.", "Nuevas oportunidades de amor en tu vida, deja atrás el pasado. Ten cuidado con las pasiones descontroladas que pueden tornarse peligrosas. Controla las emociones y deja que los sentimientos maduren. Una fase donde el poder de seducción propiciará fuertes emociones.", " Es necesario mantener el equilibrio entre el amor y el sexo, la energía sexual descontrolada puede llevarte a problemas. Busca el centro evitando mantenerte distante. Evita tomar decisiones, profundiza primero en los sentimientos, se racional y practica la sinceridad. Importante fomentar el dialogo en la relación."];
+					
+					$('.go').on('click',function(){
+						setTimeout(function(){
+							document.write(amor[Math.floor(Math.random() * amor.length)]);
+						},4100);
+					})
+				</script>
+			</div>
+			<div class="area amigos"> <strong>Salud<br><br></strong>
+				<script>
+					var salud = ["Presta atención especial a los temas digestivos. Evita excesos, cuídate con mimo y aprovecha para hacerte un chequeo.", "Problemas mentales, dolores de cabeza, tendencia a engordar. Cuida mejor tu alimentación, busca consejo médico.", "Dolencias de diversos tipos, es preciso prestar atención a los miembros inferiores y a la vista.", " Controla la ansiedad y cuida tu sistema nervioso."];
+					
+					$('.go').on('click',function(){
+						setTimeout(function(){
+							document.write(salud[Math.floor(Math.random() * salud.length)]);
+						},4100);
+					})
+				</script>
+			</div>
+			<div class="area familia"> <strong>Vida espiritual<br><br></strong>
+				<script>
+					var espiritual = ["Baños y rituales para fortalecerte y ayudarte a levantar el ánimo. Momento de equilibrar las energías negativas de tu aura.", "Sigue tu intuición y sabrás encontrar la luz.", "Son necesarios rituales para luchar contra la pena y la distancia, así como abrir caminos.", "Realiza una limpieza energética, toma baños, coloca incienso y realiza alguna ofrenda."];
+					
+					$('.go').on('click',function(){
+						setTimeout(function(){
+							document.write(espiritual[Math.floor(Math.random() * espiritual.length)]);
+						},4100);
+					})
+				</script>
+			</div>
+		</div>
+		
+
+		<div>
+			<label>
+				<input type="checkbox" id="xray">
+				Show inner workings
+			</label>
+			<label>
+				<input type="checkbox" id="perspective">
+				Toggle perspective
+			</label>
+		</div>
+
+	</div>
+	
+
+
+
+</body>
+
+</html>
